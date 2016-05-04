@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caribs", "Caribs\Caribs.csproj", "{A2E009D5-4E3B-4CCE-9F8C-E3D802875EB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caribs.AutoClicker", "Caribs.AutoClicker\Caribs.AutoClicker.csproj", "{77CF776D-BEC7-4724-948C-4F19901C4B4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caribs.Common", "Caribs.Common\Caribs.Common.csproj", "{FE062588-EB15-4065-A607-154298C6B96F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2E009D5-4E3B-4CCE-9F8C-E3D802875EB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2E009D5-4E3B-4CCE-9F8C-E3D802875EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2E009D5-4E3B-4CCE-9F8C-E3D802875EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2E009D5-4E3B-4CCE-9F8C-E3D802875EB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77CF776D-BEC7-4724-948C-4F19901C4B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77CF776D-BEC7-4724-948C-4F19901C4B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77CF776D-BEC7-4724-948C-4F19901C4B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77CF776D-BEC7-4724-948C-4F19901C4B4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE062588-EB15-4065-A607-154298C6B96F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE062588-EB15-4065-A607-154298C6B96F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE062588-EB15-4065-A607-154298C6B96F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE062588-EB15-4065-A607-154298C6B96F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

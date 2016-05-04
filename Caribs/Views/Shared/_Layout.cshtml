@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="" />
+    <title>Отдых с прибылью - Сarribean Bridge</title>
+    <link href="~/Content/styles.css" rel="stylesheet" />
+    <link href="~/Content/components.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="~/img/favicon.png" type="image/x-icon">
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.fancybox.js"></script>
+    <script src="~/Scripts/main.js"></script>
+</head>
+    <body>
+        <div class="head-substrate">
+            <div class="head-container">
+                <div class="substrate-left">
+                    <a href="~/" class="logo" alt="Отдых с прибылью - Сarribean Bridge" title="Отдых с прибылью - Сarribean Bridge">Сarribean Bridge</a>
+                    <div class="site-desc">
+                        Отдых с прибылью!
+                    </div>
+                </div>
+                <div class="substrate-right">
+                    <a href="javascript:void(0)" class="btn recall" onclick='popup("request")'>Связаться с нами</a>
+                </div>
+            </div>
+        </div>
+        <div id="fix">
+            @RenderBody()
+        </div>
+
+       
+
+
+        <div class="popup_shadow" onclick="popup_out();"></div>
+
+      @*  <div class="popup" id="callback">
+            <div class="popup_wrapper">
+                <div class="popup_wrapp">
+                    <div class="popup_h1">Заказать звонок</div>
+                    <div class="popup_h2">Заполните форму и мы вам обязательно перезвоним</div>
+                    <form action="javascript:void(0)" method="post" name="question_form" onsubmit="loadFacetzCollector('mokselle','', {type:'conv'});">
+                        <label class="name top required"><input type="text" name="name" class="input_name" placeholder="ваше имя"></label>
+                        <label class="phone top required"><input type="text" name="phone" class="input_phone" placeholder="ваш телефон"></label>
+                        <input name="callback" type="button" class="button btn left-request" value='оставить заявку'>
+                    </form>
+                </div>
+            </div>
+        </div>*@
+
+
+
+        <div class="popup" id="request">
+            <div class="popup_wrapper">
+                <div class="popup_wrapp">
+                    <div class="popup_h1">Оставить заявку</div>
+                    <div class="popup_h2">заполните форму и мы обязательно свяжемся с вами!</div>
+                    <form action="javascript:void(0)" method="post" name="question_form" onsubmit="loadFacetzCollector('mokselle','', {type:'conv'});">
+                        <label class="name left required"><input type="text" name="name" class="input_name" placeholder="ваше имя"></label> <br>
+                        <label class="phone left required"><input type="text" name="phone" class="input_phone" placeholder="ваш телефон"></label><br>
+                        <label class="email left required"><input type="text" name="email" class="input_email" placeholder="ваш e-mail"></label><br>
+                        <input name="request" type="button" class="button btn left-request" value='оставить заявку'>
+                    </form>
+                </div>
+            </div>
+        </div>
+       @* <div class="popup" id="question">
+            <div class="popup_wrapper">
+                <div class="popup_wrapp">
+                    <div class="popup_h1">Задать вопрос</div>
+                    <div class="popup_h2">заполните форму и мы обязательно свяжемся с вами!</div>
+                    <form action="#" method="post" name="question_form" onsubmit="loadFacetzCollector('mokselle','', {type:'conv'});">
+                        <table>
+                            <tr>
+                                <td>
+                                    <label class="name right required"><input type="text" name="name" class="input_name" placeholder="ваше имя"></label><br>
+                                    <label class="email right required"><input type="text" name="email" class="input_email" placeholder="ваш e-mail"></label><br>
+                                    <label class="phone right required"><input type="text" name="phone" class="input_phone" placeholder="ваш телефон"></label><br>
+                                </td>
+                                <td>
+                                    <textarea name="ques" rows="5" placeholder="ваш вопрос"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                        <input name="question" type="button" class="button btn ques_btn" value="Задать вопрос">
+                    </form>
+                </div>
+            </div>
+        </div>
+        *@
+    </body>
+</html>
