@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using Caribs.Common.Helpers;
 
@@ -8,8 +9,6 @@ namespace Caribs.Controllers
     {
         public async Task<ActionResult> Index()
         {
-            var client = new MlmHttpClient();
-            await client.Login("https://caribbeanbridge.com/office/web/site/login", "Faraon.ua", "poas054");
             return View();
         }
 

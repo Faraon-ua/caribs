@@ -1,5 +1,16 @@
 D:\Projects\Caribs\Caribs.Common\bin\Debug\Caribs.Common.dll
 D:\Projects\Caribs\Caribs.Common\bin\Debug\Caribs.Common.pdb
+D:\Projects\Caribs\Caribs.Common\bin\Debug\Caribs.Domain.dll
+D:\Projects\Caribs\Caribs.Common\bin\Debug\HtmlAgilityPack.dll
+D:\Projects\Caribs\Caribs.Common\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projects\Caribs\Caribs.Common\bin\Debug\EntityFramework.dll
+D:\Projects\Caribs\Caribs.Common\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Projects\Caribs\Caribs.Common\bin\Debug\Caribs.Domain.pdb
+D:\Projects\Caribs\Caribs.Common\bin\Debug\HtmlAgilityPack.pdb
+D:\Projects\Caribs\Caribs.Common\bin\Debug\HtmlAgilityPack.xml
+D:\Projects\Caribs\Caribs.Common\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Projects\Caribs\Caribs.Common\bin\Debug\EntityFramework.xml
+D:\Projects\Caribs\Caribs.Common\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 D:\Projects\Caribs\Caribs.Common\obj\Debug\Caribs.Common.csprojResolveAssemblyReference.cache
 D:\Projects\Caribs\Caribs.Common\obj\Debug\Caribs.Common.dll
 D:\Projects\Caribs\Caribs.Common\obj\Debug\Caribs.Common.pdb

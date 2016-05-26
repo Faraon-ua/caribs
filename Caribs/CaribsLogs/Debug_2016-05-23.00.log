@@ -1,0 +1,70 @@
+2016-05-22 02:06:43.0420 - FATAL: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Caribs.Common.Helpers.CaribsClient.<CheckIfDailyBonusAwarded>d__e.MoveNext() in d:\Projects\Caribs\Caribs.Common\Helpers\CaribsClient.cs:line 114
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Caribs.Services.SchedulerService.<StartAutoclicker>d__0.MoveNext() in d:\Projects\Caribs\Caribs.Services\SchedulerService.cs:line 30
+EXCEPTION: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Caribs.Common.Helpers.CaribsClient.<CheckIfDailyBonusAwarded>d__e.MoveNext() in d:\Projects\Caribs\Caribs.Common\Helpers\CaribsClient.cs:line 114
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Caribs.Services.SchedulerService.<StartAutoclicker>d__0.MoveNext() in d:\Projects\Caribs\Caribs.Services\SchedulerService.cs:line 30
+2016-05-22 02:11:49.0095 - FATAL: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Caribs.Common.Helpers.CaribsClient.<CheckIfDailyBonusAwarded>d__e.MoveNext() in d:\Projects\Caribs\Caribs.Common\Helpers\CaribsClient.cs:line 115
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Caribs.Services.SchedulerService.<StartAutoclicker>d__0.MoveNext() in d:\Projects\Caribs\Caribs.Services\SchedulerService.cs:line 30
+EXCEPTION: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Caribs.Common.Helpers.CaribsClient.<CheckIfDailyBonusAwarded>d__e.MoveNext() in d:\Projects\Caribs\Caribs.Common\Helpers\CaribsClient.cs:line 115
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Caribs.Services.SchedulerService.<StartAutoclicker>d__0.MoveNext() in d:\Projects\Caribs\Caribs.Services\SchedulerService.cs:line 30
+2016-05-22 02:11:49.0095 - FATAL: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Caribs.Common.Helpers.CaribsClient.<CheckIfDailyBonusAwarded>d__e.MoveNext() in d:\Projects\Caribs\Caribs.Common\Helpers\CaribsClient.cs:line 115
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Caribs.Services.SchedulerService.<StartAutoclicker>d__0.MoveNext() in d:\Projects\Caribs\Caribs.Services\SchedulerService.cs:line 30
+EXCEPTION: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Caribs.Common.Helpers.CaribsClient.<CheckIfDailyBonusAwarded>d__e.MoveNext() in d:\Projects\Caribs\Caribs.Common\Helpers\CaribsClient.cs:line 115
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Caribs.Services.SchedulerService.<StartAutoclicker>d__0.MoveNext() in d:\Projects\Caribs\Caribs.Services\SchedulerService.cs:line 30
+2016-05-22 02:11:49.0095 - FATAL: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Caribs.Common.Helpers.CaribsClient.<CheckIfDailyBonusAwarded>d__e.MoveNext() in d:\Projects\Caribs\Caribs.Common\Helpers\CaribsClient.cs:line 115
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Caribs.Services.SchedulerService.<StartAutoclicker>d__0.MoveNext() in d:\Projects\Caribs\Caribs.Services\SchedulerService.cs:line 30
+EXCEPTION: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Caribs.Common.Helpers.CaribsClient.<CheckIfDailyBonusAwarded>d__e.MoveNext() in d:\Projects\Caribs\Caribs.Common\Helpers\CaribsClient.cs:line 115
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Caribs.Services.SchedulerService.<StartAutoclicker>d__0.MoveNext() in d:\Projects\Caribs\Caribs.Services\SchedulerService.cs:line 30
+2016-05-22 02:17:09.2901 - FATAL: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Caribs.Common.Helpers.CaribsClient.<CheckIfDailyBonusAwarded>d__e.MoveNext() in d:\Projects\Caribs\Caribs.Common\Helpers\CaribsClient.cs:line 115
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Caribs.Services.SchedulerService.<StartAutoclicker>d__0.MoveNext() in d:\Projects\Caribs\Caribs.Services\SchedulerService.cs:line 30
+EXCEPTION: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Caribs.Common.Helpers.CaribsClient.<CheckIfDailyBonusAwarded>d__e.MoveNext() in d:\Projects\Caribs\Caribs.Common\Helpers\CaribsClient.cs:line 115
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Caribs.Services.SchedulerService.<StartAutoclicker>d__0.MoveNext() in d:\Projects\Caribs\Caribs.Services\SchedulerService.cs:line 30

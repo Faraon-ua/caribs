@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <_PublishTargetUrl>ftp://caribbean-bridge.somee.com/www.caribbean-bridge.somee.com/</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>04/14/2016 00:56:08</publishTime>
+    </File>
+    <File Include="bin/Caribs.Common.dll">
+      <publishTime>05/07/2016 02:14:54</publishTime>
+    </File>
+    <File Include="bin/Caribs.dll">
+      <publishTime>05/07/2016 02:14:55</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/14/2016 00:56:10</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>04/14/2016 00:56:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>04/14/2016 00:56:12</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>04/14/2016 00:56:13</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>04/14/2016 00:56:12</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>04/14/2016 00:56:13</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>04/14/2016 00:56:13</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>04/14/2016 00:56:13</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>04/14/2016 00:56:13</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>04/14/2016 00:56:13</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>04/14/2016 00:56:13</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>04/14/2016 00:56:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>04/14/2016 00:56:13</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>04/14/2016 00:56:13</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/14/2016 00:56:06</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/14/2016 00:56:07</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>04/14/2016 00:56:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>04/14/2016 00:56:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>04/14/2016 00:56:07</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>04/14/2016 00:56:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>04/14/2016 00:56:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>04/14/2016 00:56:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>04/14/2016 00:56:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>04/14/2016 00:56:06</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>04/14/2016 00:56:08</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>04/14/2016 00:56:00</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>04/14/2016 00:56:00</publishTime>
+    </File>
+    <File Include="Content/components.css">
+      <publishTime>04/24/2016 20:35:50</publishTime>
+    </File>
+    <File Include="Content/styles.css">
+      <publishTime>04/28/2016 00:03:41</publishTime>
+    </File>
+    <File Include="font2/PFSquareSansPro-Bold.eot">
+      <publishTime>04/15/2016 22:48:47</publishTime>
+    </File>
+    <File Include="font2/PFSquareSansPro-Bold.html">
+      <publishTime>04/15/2016 22:48:47</publishTime>
+    </File>
+    <File Include="font2/PFSquareSansPro-Bold.ttf">
+      <publishTime>04/15/2016 22:48:47</publishTime>
+    </File>
+    <File Include="font2/PFSquareSansPro-Medium.eot">
+      <publishTime>04/15/2016 22:48:47</publishTime>
+    </File>
+    <File Include="font2/PFSquareSansPro-Medium.html">
+      <publishTime>04/15/2016 22:48:47</publishTime>
+    </File>
+    <File Include="font2/PFSquareSansPro-Medium.ttf">
+      <publishTime>04/15/2016 22:48:47</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/14/2016 00:56:00</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/14/2016 00:56:00</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/14/2016 00:55:59</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/14/2016 00:55:59</publishTime>
+    </File>
+    <File Include="fonts/icomoon.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/icomoon.svg">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/icomoon.ttf">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/icomoon.woff">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/icomoond41d.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-bold-webfont.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-bold-webfont.svg">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-bold-webfont.ttf">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-bold-webfont.woff">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-bold-webfontd41d.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-italic_0-webfont.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-italic_0-webfont.svg">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-italic_0-webfont.ttf">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-italic_0-webfont.woff">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-italic_0-webfontd41d.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/PFDinTextCondPro-Light.svg">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/PFDinTextCondPro-Light.ttf">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/PFDinTextCondPro-Light.woff">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/PFDinTextCondPro-Lightd41d.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-light_0-webfont.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-light_0-webfont.svg">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-light_0-webfont.ttf">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-light_0-webfont.woff">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-light_0-webfontd41d.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-medium_1-webfont.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-medium_1-webfont.svg">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-medium_1-webfont.ttf">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-medium_1-webfont.woff">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-medium_1-webfontd41d.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-regular_0-webfont.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-regular_0-webfont.svg">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-regular_0-webfont.ttf">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-regular_0-webfont.woff">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfdintextcondpro-regular_0-webfontd41d.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfsquaresanspro-boldwebfont.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfsquaresanspro-boldwebfont.svg">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfsquaresanspro-boldwebfont.ttf">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfsquaresanspro-boldwebfont.woff">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfsquaresanspro-boldwebfont.woff2">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfsquaresanspro-boldwebfontd41d.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/PFSquareSansPro-Light-2.html">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/PFSquareSansPro-Light-3.html">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/PFSquareSansPro-Light.html">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/PFSquareSansPro-Lightd41d.html">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfsquaresanspro-mediumwebfont.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfsquaresanspro-mediumwebfont.svg">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfsquaresanspro-mediumwebfont.ttf">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfsquaresanspro-mediumwebfont.woff">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfsquaresanspro-mediumwebfont.woff2">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/pfsquaresanspro-mediumwebfontd41d.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/PFSquareSansPro-Regular.svg">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/PFSquareSansPro-Regular.ttf">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/PFSquareSansPro-Regular.woff">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/PFSquareSansPro-Regulard41d.eot">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="fonts/stylesheet.css">
+      <publishTime>04/15/2016 22:49:00</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/14/2016 00:55:48</publishTime>
+    </File>
+    <File Include="img/4.png">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/closed.png">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/favicon.png">
+      <publishTime>04/24/2016 19:14:13</publishTime>
+    </File>
+    <File Include="img/footer.jpg">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/form-video.png">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/formbg.jpg">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/hsepar.jpg">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/ipad_shadow.png">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/light-shadow.png">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/more.jpg">
+      <publishTime>04/19/2016 00:02:45</publishTime>
+    </File>
+    <File Include="img/popup2_bg.jpg">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/popup_bg.jpg">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/review.jpg">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/ss_icon1.png">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/ss_icon2.png">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/ss_icon3.png">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/ss_icon4.png">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/ss_icon5.png">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/ss_icon6.png">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/thisis.jpg">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/thsep.jpg">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/tvsep.jpg">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="img/vsepar.jpg">
+      <publishTime>04/15/2016 22:48:23</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/14/2016 00:56:14</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>04/14/2016 00:55:59</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>04/14/2016 00:55:59</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>04/14/2016 00:56:01</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>04/14/2016 00:56:01</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>04/14/2016 00:56:00</publishTime>
+    </File>
+    <File Include="Scripts/jquery.fancybox.js">
+      <publishTime>04/24/2016 21:33:08</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>04/14/2016 00:56:14</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>04/14/2016 00:56:14</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>04/14/2016 00:56:14</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>04/14/2016 00:56:14</publishTime>
+    </File>
+    <File Include="Scripts/main.js">
+      <publishTime>04/24/2016 21:36:50</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>04/14/2016 00:56:07</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>04/14/2016 00:56:08</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>04/14/2016 00:56:08</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>04/24/2016 21:36:28</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
+      <publishTime>04/14/2016 00:56:09</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginFailure.cshtml">
+      <publishTime>04/14/2016 00:56:09</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>04/14/2016 00:56:09</publishTime>
+    </File>
+    <File Include="Views/Account/Manage.cshtml">
+      <publishTime>04/14/2016 00:56:09</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>04/14/2016 00:56:09</publishTime>
+    </File>
+    <File Include="Views/Account/_ChangePasswordPartial.cshtml">
+      <publishTime>04/14/2016 00:56:09</publishTime>
+    </File>
+    <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
+      <publishTime>04/14/2016 00:56:09</publishTime>
+    </File>
+    <File Include="Views/Account/_RemoveAccountPartial.cshtml">
+      <publishTime>04/14/2016 00:56:09</publishTime>
+    </File>
+    <File Include="Views/Account/_SetPasswordPartial.cshtml">
+      <publishTime>04/14/2016 00:56:09</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>04/14/2016 00:55:48</publishTime>
+    </File>
+    <File Include="Views/Home/Business.cshtml">
+      <publishTime>04/24/2016 20:56:52</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>04/14/2016 00:55:48</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>04/28/2016 00:04:41</publishTime>
+    </File>
+    <File Include="Views/Home/Investor.cshtml">
+      <publishTime>04/24/2016 21:16:53</publishTime>
+    </File>
+    <File Include="Views/Home/Seller.cshtml">
+      <publishTime>04/24/2016 21:15:52</publishTime>
+    </File>
+    <File Include="Views/Home/Tourist.cshtml">
+      <publishTime>04/24/2016 20:11:15</publishTime>
+    </File>
+    <File Include="Views/Home/TourOperator.cshtml">
+      <publishTime>04/24/2016 20:45:39</publishTime>
+    </File>
+    <File Include="Views/Home/University.cshtml">
+      <publishTime>04/24/2016 21:17:52</publishTime>
+    </File>
+    <File Include="Views/Schedule/Index.cshtml">
+      <publishTime>05/07/2016 00:45:44</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>04/14/2016 00:56:09</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>04/27/2016 23:47:25</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>04/14/2016 00:56:09</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>04/14/2016 00:55:48</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>04/14/2016 00:55:48</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/07/2016 02:05:13</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

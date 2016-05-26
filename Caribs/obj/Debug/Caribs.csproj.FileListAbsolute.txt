@@ -1,7 +1,11 @@
+D:\Projects\Caribs\Caribs\bin\NLog.config
 D:\Projects\Caribs\Caribs\bin\Caribs.dll.config
 D:\Projects\Caribs\Caribs\bin\Caribs.dll
 D:\Projects\Caribs\Caribs\bin\Caribs.pdb
 D:\Projects\Caribs\Caribs\bin\Antlr3.Runtime.dll
+D:\Projects\Caribs\Caribs\bin\Caribs.Common.dll
+D:\Projects\Caribs\Caribs\bin\Caribs.Domain.dll
+D:\Projects\Caribs\Caribs\bin\Caribs.Services.dll
 D:\Projects\Caribs\Caribs\bin\EntityFramework.dll
 D:\Projects\Caribs\Caribs\bin\EntityFramework.SqlServer.dll
 D:\Projects\Caribs\Caribs\bin\Microsoft.AspNet.Identity.Core.dll
@@ -18,6 +22,7 @@ D:\Projects\Caribs\Caribs\bin\Microsoft.Owin.Security.OAuth.dll
 D:\Projects\Caribs\Caribs\bin\Microsoft.Owin.Security.Twitter.dll
 D:\Projects\Caribs\Caribs\bin\Microsoft.Web.Infrastructure.dll
 D:\Projects\Caribs\Caribs\bin\Newtonsoft.Json.dll
+D:\Projects\Caribs\Caribs\bin\NLog.dll
 D:\Projects\Caribs\Caribs\bin\Owin.dll
 D:\Projects\Caribs\Caribs\bin\System.Web.Helpers.dll
 D:\Projects\Caribs\Caribs\bin\System.Web.Mvc.dll
@@ -27,6 +32,11 @@ D:\Projects\Caribs\Caribs\bin\System.Web.WebPages.Deployment.dll
 D:\Projects\Caribs\Caribs\bin\System.Web.WebPages.dll
 D:\Projects\Caribs\Caribs\bin\System.Web.WebPages.Razor.dll
 D:\Projects\Caribs\Caribs\bin\WebGrease.dll
+D:\Projects\Caribs\Caribs\bin\HtmlAgilityPack.dll
+D:\Projects\Caribs\Caribs\bin\Caribs.Common.pdb
+D:\Projects\Caribs\Caribs\bin\Caribs.Domain.pdb
+D:\Projects\Caribs\Caribs\bin\Caribs.Services.pdb
+D:\Projects\Caribs\Caribs\bin\NLog.xml
 D:\Projects\Caribs\Caribs\bin\System.Web.Helpers.xml
 D:\Projects\Caribs\Caribs\bin\System.Web.Mvc.xml
 D:\Projects\Caribs\Caribs\bin\System.Web.Optimization.xml
@@ -50,8 +60,8 @@ D:\Projects\Caribs\Caribs\bin\Microsoft.Owin.Security.OAuth.xml
 D:\Projects\Caribs\Caribs\bin\Microsoft.Owin.Security.Google.xml
 D:\Projects\Caribs\Caribs\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Projects\Caribs\Caribs\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Projects\Caribs\Caribs\bin\HtmlAgilityPack.pdb
+D:\Projects\Caribs\Caribs\bin\HtmlAgilityPack.xml
 D:\Projects\Caribs\Caribs\obj\Debug\Caribs.csprojResolveAssemblyReference.cache
 D:\Projects\Caribs\Caribs\obj\Debug\Caribs.dll
 D:\Projects\Caribs\Caribs\obj\Debug\Caribs.pdb
-D:\Projects\Caribs\Caribs\bin\Caribs.Common.dll
-D:\Projects\Caribs\Caribs\bin\Caribs.Common.pdb
