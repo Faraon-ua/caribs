@@ -27,3 +27,6 @@ D:\Projects\Caribs\Caribs.Domain\obj\Debug\Caribs.Domain.Migrations.AddEmailAndL
 D:\Projects\Caribs\Caribs.Domain\obj\Debug\Caribs.Domain.csproj.GenerateResource.Cache
 D:\Projects\Caribs\Caribs.Domain\obj\Debug\Caribs.Domain.dll
 D:\Projects\Caribs\Caribs.Domain\obj\Debug\Caribs.Domain.pdb
+D:\Projects\Caribs\Caribs.Domain\obj\Debug\Caribs.Domain.csprojResolveAssemblyReference.cache
+D:\Projects\Caribs\Caribs.Domain\obj\Debug\Caribs.Domain.Migrations.AddActiveUntillPhonefield.resources
+D:\Projects\Caribs\Caribs.Domain\obj\Debug\Caribs.Domain.Migrations.AddOrders.resources

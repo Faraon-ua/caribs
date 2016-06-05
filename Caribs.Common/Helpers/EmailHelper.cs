@@ -6,10 +6,9 @@ namespace Caribs.Common.Helpers
 {
     public class EmailHelper
     {
-        //        private const string From = "faraon.ua@gmail.com";
-        private const string From = "Faraonishe@yandex.ua";
-        private const string ToAdmin = "faraon.ua@gmail.com";
-        private const string DisplayName = "MlmService";
+        private const string From = "promobiz-soft@yandex.ru";
+        public const string ToAdmin = "faraon.ua@gmail.com";
+        private const string DisplayName = "Promobiz Soft";
 
         private static EmailHelper _instance;
         public static EmailHelper Instance
@@ -58,17 +57,11 @@ namespace Caribs.Common.Helpers
             SendEmail(From, email, body.ToString(), string.Format("[{0}] Login failed to caribbeanbridge.com", accontName));
         }
 
-        public void SendAutoClickFailed(string email, string accountName)
+        public void SendAutoClickFailed(string email, string accountName, string message = null)
         {
             var body = new StringBuilder();
-            body.Append(string.Format("Автокликер не сработал для аккаунта {0}", accountName));
+            body.Append(string.Format("Автокликер не сработал для аккаунта {0}, {1}", accountName, message));
             SendEmail(From, email, body.ToString(), "Автокликер не сработал!!!");
-        }
-        public void SendAutoClickSuccess(string email, string accountName)
-        {
-            var body = new StringBuilder();
-            body.Append(string.Format("Автокликер зачислил тебе бабло на аккаунт {0} :)", accountName));
-            SendEmail(From, email, body.ToString(), "Сегодня ты получил бабло");
         }
         public void SendNewAwards(string newAwardsHtml, string email, string accountName)
         {
@@ -77,6 +70,22 @@ namespace Caribs.Common.Helpers
             body.Append(newAwardsHtml);
             body.Append("</table>");
             SendEmail(From, email, body.ToString(), string.Format("Новые операции по счету на вашем аккаунте {0} в Caribbean Bridge", accountName));
+        }
+
+        public void SendAutoClickSubscribed(string email, string accountName)
+        {
+            var body = new StringBuilder();
+            body.Append(string.Format("Ваш аккаунт {0} был успешно зарегистрирован на сервисе Автокликер для CaribbeanBridge. Спасибо за использование нашего сервиса.", accountName));
+            SendEmail(From, email, body.ToString(), "Регистрация аккаунта для автокликера CaribbeanBridge");
+        } 
+        
+        public void SendNewPayment(string notification_type, string operation_id, string label, string datetime,
+                decimal amount, decimal withdraw_amount, string sender, string sha1_hash, string currency, bool codepro)
+        {
+            string paramString = String.Format("{0} {1} {2} {3} {4} {5} {6} {7}",
+              notification_type, operation_id, amount, currency, datetime, sender,
+              codepro.ToString().ToLower(), label);
+            SendEmail(From, ToAdmin, paramString, "New Payment");
         }
     }
 }

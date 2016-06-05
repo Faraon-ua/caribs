@@ -6,7 +6,9 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Reflection;
+using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.Mvc;
 using Caribs.Common.Helpers;
 using Caribs.Common.Services;
@@ -99,9 +101,9 @@ namespace Caribs.Services.Clients
         public async Task<bool> Login(string userName, string password)
         {
             var result = await GetServiceResponse(SettingsService.CaribsLoginUrl, HttpVerbs.Post, null,
-               string.Format(SettingsService.CaribsLoginBodyTemplate, userName, password)).ConfigureAwait(false);
+               string.Format(SettingsService.CaribsLoginBodyTemplate, userName, HttpUtility.UrlEncode(password, Encoding.Default))).ConfigureAwait(false);
             var resultPage = await result.Content.ReadAsStringAsync();
-            return resultPage.Contains(userName + " - id");
+            return resultPage.Contains(userName + " - id", StringComparison.OrdinalIgnoreCase);
         }
 
         public async Task ProcessAccount(MlmAccount account)

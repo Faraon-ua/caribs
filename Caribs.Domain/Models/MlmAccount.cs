@@ -19,7 +19,10 @@ namespace Caribs.Domain.Models
         public string Password { get; set; }
         [Required]
         public string Email { get; set; }
+        public string Phone { get; set; }
         public string LastAwardedOn { get; set; }
+        [Required]
+        public DateTime ActiveUntill { get; set; }
         [Required]
         public MlmAccountType MlmAccountType { get; set; }
         public string UserId { get; set; }

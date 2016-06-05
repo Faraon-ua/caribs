@@ -82,8 +82,17 @@
     <Compile Include="Migrations\201605232134545_AddEmailAndLastAwardedOnMlmAccount.Designer.cs">
       <DependentUpon>201605232134545_AddEmailAndLastAwardedOnMlmAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606051100119_AddActiveUntillPhonefield.cs" />
+    <Compile Include="Migrations\201606051100119_AddActiveUntillPhonefield.Designer.cs">
+      <DependentUpon>201606051100119_AddActiveUntillPhonefield.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606051920570_AddOrders.cs" />
+    <Compile Include="Migrations\201606051920570_AddOrders.Designer.cs">
+      <DependentUpon>201606051920570_AddOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MlmAccount.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Models\UserSubscription.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -99,6 +108,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605232134545_AddEmailAndLastAwardedOnMlmAccount.resx">
       <DependentUpon>201605232134545_AddEmailAndLastAwardedOnMlmAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606051100119_AddActiveUntillPhonefield.resx">
+      <DependentUpon>201606051100119_AddActiveUntillPhonefield.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606051920570_AddOrders.resx">
+      <DependentUpon>201606051920570_AddOrders.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

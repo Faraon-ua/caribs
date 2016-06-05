@@ -47,5 +47,12 @@ namespace Caribs.Common.Services
                 return ConfigurationManager.AppSettings["CaribsTransactionDateFormatText"];
             }
         }
+        public static string CaribsSecretYandexKey
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["CaribsSecretYandexKey"];
+            }
+        }
     }
 }

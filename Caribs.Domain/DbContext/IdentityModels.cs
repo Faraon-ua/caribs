@@ -18,5 +18,6 @@ namespace Caribs.Domain.DbContext
         }
 
         public DbSet<MlmAccount> MlmAccounts { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }

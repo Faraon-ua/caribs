@@ -164,20 +164,28 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
+    <Compile Include="Controllers\SoftController.cs" />
     <Compile Include="Controllers\ToolsController.cs" />
     <Compile Include="Filters\GlobalErrorHandler.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\SoftRegistrationViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\autoclickreg.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\components.css" />
+    <Content Include="Content\loader.css" />
+    <Content Include="Content\OnOff.css" />
+    <Content Include="Content\soft.css" />
+    <Content Include="Content\StyledSelect.css" />
     <Content Include="img\favicon.png" />
+    <Content Include="img\logo_top.png" />
     <Content Include="img\more.jpg" />
     <Content Include="Content\styles.css" />
     <Content Include="font2\PFSquareSansPro-Bold.html" />
@@ -194,6 +202,37 @@
     <Content Include="img\popup2_bg.jpg" />
     <Content Include="img\popup_bg.jpg" />
     <Content Include="img\review.jpg" />
+    <Content Include="img\soft\b2.static.userimages.ru\img\4\8\5\bc9a4fb721045c85282a11468f9ee.png" />
+    <Content Include="img\soft\b2.static.userimages.ru\img\d\d\c\44253626810511d83a98c8160d99b.png" />
+    <Content Include="img\soft\b2.static.userimages.ru\img\f\a\b\fe1cc12259fc57959ba3500f1ac1c.png" />
+    <Content Include="img\soft\b3.static.userimages.ru\img\0\6\5\c4350e51c09c7d6105137ff7f217a.png" />
+    <Content Include="img\soft\b3.static.userimages.ru\img\2\1\e\3807effac191a995c982ce9f7819f.png" />
+    <Content Include="img\soft\b3.static.userimages.ru\img\6\9\d\58c08f2a82ba9738fec31bfddcee6.png" />
+    <Content Include="img\soft\b3.static.userimages.ru\img\b\b\2\ca982062b69cd84c4bee320c8ec6b.png" />
+    <Content Include="img\soft\b3.static.userimages.ru\img\d\4\d\a4687668d4b5c3c38acbcfccfd7ab.png" />
+    <Content Include="img\soft\b3.static.userimages.ru\img\e\7\e\03a32990e6fcf4034e32b76bcfdde.png" />
+    <Content Include="img\soft\b4.static.userimages.ru\img\3\d\1\623b85b4129c113237a9f276c7373.png" />
+    <Content Include="img\soft\b4.static.userimages.ru\img\7\0\f\30ac58893c58cf53d0ef00ce8544c.png" />
+    <Content Include="img\soft\b4.static.userimages.ru\img\7\f\0\da8ebd5ccf26b7ca700233d0b4004.png" />
+    <Content Include="img\soft\b4.static.userimages.ru\img\9\4\8\e0ff1227ae289cf322259ef10b75e.png" />
+    <Content Include="img\soft\b4.static.userimages.ru\img\b\f\c\645675d90b6b11569d239716561fe.png" />
+    <Content Include="img\soft\b4.static.userimages.ru\img\e\0\5\6f3f4fe9f615b2c53e892de58543a.png" />
+    <Content Include="img\soft\b5.static.userimages.ru\img\0\a\8\57ff58f9c2eecd16287c5992d1df5.png" />
+    <Content Include="img\soft\b5.static.userimages.ru\img\7\f\6\8d76cb204073912907116acc70123.png" />
+    <Content Include="img\soft\close.png" />
+    <Content Include="img\soft\countdown01.png" />
+    <Content Include="img\soft\countdown02.png" />
+    <Content Include="img\soft\countdown03.png" />
+    <Content Include="img\soft\countdown04.png" />
+    <Content Include="img\soft\countdown05.png" />
+    <Content Include="img\soft\countdown06.png" />
+    <Content Include="img\soft\countdown07.png" />
+    <Content Include="img\soft\countdown08.png" />
+    <Content Include="img\soft\cycle-arrow-next.png" />
+    <Content Include="img\soft\cycle-arrow-prev.png" />
+    <Content Include="img\soft\social.gif" />
+    <Content Include="img\soft\socials.png" />
+    <Content Include="img\soft\sprite99d6.png" />
     <Content Include="img\ss_icon1.png" />
     <Content Include="img\ss_icon2.png" />
     <Content Include="img\ss_icon3.png" />
@@ -204,6 +243,8 @@
     <Content Include="img\thsep.jpg" />
     <Content Include="img\tvsep.jpg" />
     <Content Include="img\vsepar.jpg" />
+    <Content Include="img\ya_icon.png" />
+    <Content Include="Scripts\autoclickreg.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="font2\PFSquareSansPro-Bold.eot" />
@@ -222,6 +263,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.fancybox.js" />
+    <Content Include="Scripts\jquery.maskedinput.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -230,6 +272,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\stringExtensions.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -264,6 +307,9 @@
     <Content Include="Views\Home\Business.cshtml" />
     <Content Include="Views\Home\Investor.cshtml" />
     <Content Include="Views\Home\Seller.cshtml" />
+    <Content Include="Views\Soft\Index.cshtml" />
+    <Content Include="Views\Soft\Registration.cshtml" />
+    <Content Include="Views\Soft\PaymentSuccess.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

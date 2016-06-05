@@ -1,0 +1,16 @@
+2016-05-30 20:19:47.5107 - FATAL: System.Net.Mail.SmtpException: Service not available, closing transmission channel. The server response was: 4.4.2 smtp4o.mail.yandex.net Error: timeout exceeded
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at Caribs.Common.Helpers.EmailHelper.SendEmail(String fromad, String toad, String body, String subjectcontent) in d:\Projects\Caribs\Caribs.Common\Helpers\EmailHelper.cs:line 27
+   at Caribs.Common.Helpers.EmailHelper.SendLoginFailed(String email, String accontName) in d:\Projects\Caribs\Caribs.Common\Helpers\EmailHelper.cs:line 56
+   at Caribs.Services.SchedulerService.<StartAutoclicker>d__0.MoveNext() in d:\Projects\Caribs\Caribs.Services\SchedulerService.cs:line 28
+EXCEPTION: System.Net.Mail.SmtpException: Service not available, closing transmission channel. The server response was: 4.4.2 smtp4o.mail.yandex.net Error: timeout exceeded
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at Caribs.Common.Helpers.EmailHelper.SendEmail(String fromad, String toad, String body, String subjectcontent) in d:\Projects\Caribs\Caribs.Common\Helpers\EmailHelper.cs:line 27
+   at Caribs.Common.Helpers.EmailHelper.SendLoginFailed(String email, String accontName) in d:\Projects\Caribs\Caribs.Common\Helpers\EmailHelper.cs:line 56
+   at Caribs.Services.SchedulerService.<StartAutoclicker>d__0.MoveNext() in d:\Projects\Caribs\Caribs.Services\SchedulerService.cs:line 28
