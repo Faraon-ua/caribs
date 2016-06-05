@@ -16,7 +16,7 @@ namespace Caribs.Controllers
 {
     public class SoftController : Controller
     {
-        private readonly int[] _subscriptionForMonth = { 1, 2, 3, 4, 5, 6 };
+        private readonly double[] _subscriptionForMonth = { 0.1, 2, 3, 4, 5, 6 };
 
         //
         // GET: /Soft/
@@ -107,10 +107,11 @@ namespace Caribs.Controllers
                 {
                     //extend activeUntill value
                     var currencyHelper = new CurrencyHelper();
-                    var months = (int)Math.Round(withdraw_amount / (decimal)currencyHelper.CurrencyRate.RUB / 2); //2 usd
+//                    var months = (int) Math.Round(withdraw_amount/(decimal) currencyHelper.CurrencyRate.RUB/2); //2 usd
+                    var months = 2;
                     var mlmAccount = db.MlmAccounts.FirstOrDefault(entry => entry.Id == accountId);
                     if (mlmAccount == null)
-                        EmailHelper.Instance.SendAutoClickFailed("faraon.ua@gmail.com", accountId.ToString(),
+                        EmailHelper.Instance.SendAutoClickFailed(EmailHelper.ToAdmin, accountId.ToString(),
                             "No such account");
                     else
                     {
@@ -137,6 +138,10 @@ namespace Caribs.Controllers
 
                     db.SaveChanges();
                 }
+            }
+            else
+            {
+                EmailHelper.Instance.SendAutoClickFailed(EmailHelper.ToAdmin, label, "hash does not match");
             }
         }
 

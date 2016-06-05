@@ -82,9 +82,19 @@ namespace Caribs.Common.Helpers
         public void SendNewPayment(string notification_type, string operation_id, string label, string datetime,
                 decimal amount, decimal withdraw_amount, string sender, string sha1_hash, string currency, bool codepro)
         {
-            string paramString = String.Format("{0} {1} {2} {3} {4} {5} {6} {7}",
-              notification_type, operation_id, amount, currency, datetime, sender,
-              codepro.ToString().ToLower(), label);
+            var paramString = String.Format(
+                "notification_type:{0}<br/> " +
+                "operation_id:{1}<br/>" +
+                "label:{2}<br/>" +
+                "datetime:{3}<br/>" +
+                "amount:{4}<br/>" +
+                "withdraw_amount:{5}<br/>" +
+                "sender:{6}<br/>" +
+                "sha1_hash:{7}<br/>" +
+                "currency:{8}<br/>" +
+                "codepro:{9}<br/>",
+                notification_type, operation_id, label, datetime, amount, withdraw_amount, sender, sha1_hash, currency,
+                codepro);
             SendEmail(From, ToAdmin, paramString, "New Payment");
         }
     }
