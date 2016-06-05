@@ -1,4 +1,0 @@
-D:\Projects\Caribs\Caribs.Common\bin\Release\Caribs.Common.dll
-D:\Projects\Caribs\Caribs.Common\bin\Release\Caribs.Common.pdb
-D:\Projects\Caribs\Caribs.Common\obj\Release\Caribs.Common.dll
-D:\Projects\Caribs\Caribs.Common\obj\Release\Caribs.Common.pdb
