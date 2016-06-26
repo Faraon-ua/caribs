@@ -16,7 +16,7 @@ namespace Caribs.Controllers
 {
     public class SoftController : Controller
     {
-        private readonly double[] _subscriptionForMonth = { 0.1, 2, 3, 4, 5, 6 };
+        private readonly int[] _subscriptionForMonth = { 1, 2, 3, 4, 5, 6 };
 
         //
         // GET: /Soft/
@@ -36,15 +36,20 @@ namespace Caribs.Controllers
             return View(viewModel);
         }
 
+        public PartialViewResult RegistrationAccount(int number)
+        {
+            return PartialView("_AccountPartial", number);
+        }
+
         [HttpPost]
-        public async Task<ActionResult> ValidateCaribsAccount(string userName, string password, string email, string phone)
+        public async Task<ActionResult> ValidateCaribsAccount(string userName, string password, string email, string phone, string inputId)
         {
             phone = phone.Replace("(", "").Replace(")", "").Replace("-", "");
             Guid userId;
             var client = new CaribsClient();
             var loginResult = await client.Login(userName, password).ConfigureAwait(false);
             if (!loginResult)
-                return Json(new { loginResult = false });
+                return Json(new { loginResult = false, inputId });
             using (var db = new ApplicationDbContext())
             {
                 var existingAccount = db.MlmAccounts.FirstOrDefault(entry => entry.Login == userName);
@@ -74,7 +79,7 @@ namespace Caribs.Controllers
                     db.SaveChanges();
                 }
             }
-            return Json(new { loginResult = true, userId });
+            return Json(new { loginResult = true, userId, inputId });
         }
 
         public ActionResult PaymentSuccess()
@@ -102,41 +107,48 @@ namespace Caribs.Controllers
             if (0 == comparer.Compare(paramStringHash1, sha1_hash))
             {
                 ////////////////////////////////////////////////////////////////////////
-                var accountId = Guid.Parse(label);
-                using (var db = new ApplicationDbContext())
+                var accountIds = label.Split(',');
+                foreach (var accountIdStr in accountIds)
                 {
-                    //extend activeUntill value
-                    var currencyHelper = new CurrencyHelper();
-//                    var months = (int) Math.Round(withdraw_amount/(decimal) currencyHelper.CurrencyRate.RUB/2); //2 usd
-                    var months = 2;
-                    var mlmAccount = db.MlmAccounts.FirstOrDefault(entry => entry.Id == accountId);
-                    if (mlmAccount == null)
-                        EmailHelper.Instance.SendAutoClickFailed(EmailHelper.ToAdmin, accountId.ToString(),
-                            "No such account");
-                    else
+                    var accountId = Guid.Parse(accountIdStr);
+                    using (var db = new ApplicationDbContext())
                     {
-                        var activeUntill = mlmAccount.ActiveUntill > DateTime.Now
-                            ? mlmAccount.ActiveUntill.AddMonths(months)
-                            : DateTime.Now.AddMonths(months);
-                        mlmAccount.ActiveUntill = activeUntill;
-                        db.Entry(mlmAccount).State = EntityState.Modified;
+                        //extend activeUntill value
+                        var currencyHelper = new CurrencyHelper();
+                        var months = (int) Math.Round(withdraw_amount/(decimal) currencyHelper.CurrencyRate.RUB/ accountIds.Length / 2);//2 usd
+                        var mlmAccount = db.MlmAccounts.FirstOrDefault(entry => entry.Id == accountId);
+                        if (mlmAccount == null)
+                        {
+                            EmailHelper.Instance.SendAutoClickFailed(EmailHelper.ToAdmin, accountId.ToString(),
+                                "No such account");
+                        }
+                        else
+                        {
+                            var activeUntill = mlmAccount.ActiveUntill > DateTime.Now
+                                ? mlmAccount.ActiveUntill.AddMonths(months)
+                                : DateTime.Now.AddMonths(months);
+                            mlmAccount.ActiveUntill = activeUntill;
+                            db.Entry(mlmAccount).State = EntityState.Modified;
+                        }
+
+                        //add to DB
+
+                        var order = new Order
+                        {
+                            Id = Guid.NewGuid(),
+                            OperationId = operation_id,
+                            Date = DateTime.Parse(datetime),
+                            Amount = amount,
+                            WithdrawAmount = withdraw_amount,
+                            Sender = string.IsNullOrEmpty(sender) ? "N/A" : sender,
+                            AccountId = accountId
+                        };
+                        db.Orders.Add(order);
+                        db.SaveChanges();
+
+                        EmailHelper.Instance.SendAutoClickSubscribed(mlmAccount.Email, mlmAccount.Login,
+                            mlmAccount.ActiveUntill);
                     }
-
-                    //add to DB
-
-                    var order = new Order
-                    {
-                        Id = Guid.NewGuid(),
-                        OperationId = operation_id,
-                        Date = DateTime.Now,
-                        Amount = amount,
-                        WithdrawAmount = withdraw_amount,
-                        Sender = sender,
-                        AccountId = accountId
-                    };
-                    db.Orders.Add(order);
-
-                    db.SaveChanges();
                 }
             }
             else

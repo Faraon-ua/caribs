@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Mail;
 using System.Text;
+using Caribs.Common.Services;
 
 namespace Caribs.Common.Helpers
 {
@@ -18,6 +20,16 @@ namespace Caribs.Common.Helpers
 
         private bool SendEmail(string fromad, string toad, string body, string subjectcontent)
         {
+            var usermail = Mailbodplain(fromad, new List<string>{toad} , body, DisplayName, subjectcontent);
+            var client = new SmtpClient();
+            client.EnableSsl = true;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+            client.Send(usermail);
+            return true;
+        }
+        private bool SendEmail(string fromad, IEnumerable<string> toad, string body, string subjectcontent)
+        {
             MailMessage usermail = Mailbodplain(fromad, toad, body, DisplayName, subjectcontent);
 
             bool result;
@@ -29,12 +41,14 @@ namespace Caribs.Common.Helpers
             return true;
         }
 
-        private MailMessage Mailbodplain(string fromad, string toad, string body, string displayName, string subjectcontent)
+        private MailMessage Mailbodplain(string fromad, IEnumerable<string> toadresses, string body, string displayName, string subjectcontent)
         {
             var mail = new MailMessage();
             string from = fromad;
-            string to = toad;
-            mail.To.Add(to);
+            foreach (var toad in toadresses)
+            {
+                mail.To.Add(toad);
+            }
             mail.From = new MailAddress(from, displayName, System.Text.Encoding.UTF8);
             mail.Subject = subjectcontent;
             mail.SubjectEncoding = System.Text.Encoding.UTF8;
@@ -72,11 +86,22 @@ namespace Caribs.Common.Helpers
             SendEmail(From, email, body.ToString(), string.Format("Новые операции по счету на вашем аккаунте {0} в Caribbean Bridge", accountName));
         }
 
-        public void SendAutoClickSubscribed(string email, string accountName)
+        public void SendAutoClickSubscribed(string email, string accountName, DateTime validUntil)
         {
             var body = new StringBuilder();
-            body.Append(string.Format("Ваш аккаунт {0} был успешно зарегистрирован на сервисе Автокликер для CaribbeanBridge. Спасибо за использование нашего сервиса.", accountName));
+            body.Append(string.Format("Ваш аккаунт {0} был успешно зарегистрирован на сервисе Автокликер для CaribbeanBridge. Регистрация активна до {1}. Спасибо за использование нашего сервиса.", accountName, validUntil.ToShortDateString()));
             SendEmail(From, email, body.ToString(), "Регистрация аккаунта для автокликера CaribbeanBridge");
+        }  
+        
+        public void SendAutoClickExpiring(string email, string accountName, DateTime expireOn)
+        {
+            var body = new StringBuilder();
+            body.Append(string.Format("Регистрация на автокликер к вашему аккаунт {0} истекает {1}. Пожалуйста, обновите регистрацию.", accountName, expireOn.ToShortDateString()));
+            SendEmail(From, email, body.ToString(), "Истекает срок регистрации аккаунта для автокликера CaribbeanBridge");
+        }  
+        public void SendSqlConnectionException(string exception)
+        {
+            SendEmail(From, ToAdmin, exception, "Sql connection exception");
         } 
         
         public void SendNewPayment(string notification_type, string operation_id, string label, string datetime,
@@ -95,7 +120,8 @@ namespace Caribs.Common.Helpers
                 "codepro:{9}<br/>",
                 notification_type, operation_id, label, datetime, amount, withdraw_amount, sender, sha1_hash, currency,
                 codepro);
-            SendEmail(From, ToAdmin, paramString, "New Payment");
+            var sendToAdmins = SettingsService.NotificationEmails.Split(';');
+            SendEmail(From, sendToAdmins, paramString, "New Payment");
         }
     }
 }

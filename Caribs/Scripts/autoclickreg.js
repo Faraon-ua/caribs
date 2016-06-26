@@ -2,10 +2,10 @@
 var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
-var payAmount, uah, usd, rub, accountId;
+var payAmount, uah, usd, rub, accountIds = "", correctAccounts = 0;
 
 
-$("#phone").mask("(999)999-99-99");
+$("#phone").mask("99(999)999-99-99");
 
 $("#phone").on("blur", function () {
     var last = $(this).val().substr($(this).val().indexOf("-") + 1);
@@ -29,20 +29,38 @@ $('#accountRegForm').submit(function (event) {
 $("#next_step1").click(function () {
     $("#next_step1").hide();
     $("#spinner").show();
-    $.post("ValidateCaribsAccount",
-    { userName: $("#login").val(), password: $("#password").val(), email: $("#email").val(), phone: $("#phone").val() },
-    function (data) {
-        $("#next_step1").show();
-        $("#spinner").hide();
-        if (data.loginResult) {
-            accountId = data.userId;
-            if ($('#accountRegForm')[0].checkValidity()) {
-                $(".next").click();
-            }
-        }
-        else {
-            alert("Вы ввели неправильный логин или пароль");
-        }
+    accountIds = "";
+    var accountsNumber = $('[id^=login]').length;
+    correctAccounts = 0;
+    var processedAcounts = 0;
+    $('[id^=login]').each(function () {
+        var login = $(this);
+        var password = $(this).next();
+        $.post("ValidateCaribsAccount",
+            { userName: login.val(), password: password.val(), email: $("#email").val(), phone: $("#phone").val(), inputId: login.attr("id") },
+            function (data) {
+                if (data.loginResult) {
+                    accountIds = accountIds + data.userId + ',';
+                    correctAccounts++;
+                    $("#" + data.inputId).parent().removeClass().addClass("accBlock-success");
+                } else {
+                    $("#" + data.inputId).parent().removeClass().addClass("accBlock-fail");
+
+                }
+                processedAcounts++;
+                if (processedAcounts == accountsNumber) {
+                    $("#next_step1").show();
+                    $("#spinner").hide();
+                    if (accountsNumber == correctAccounts) {
+                        if ($('#accountRegForm')[0].checkValidity()) {
+                            printPayAmount();
+                            $(".next").click();
+                        }
+                    } else {
+                        alert("Вы ввели неправильный логин или пароль от некоторых ваших аккантов");
+                    }
+                }
+            });
     });
 });
 
@@ -55,11 +73,14 @@ $("#next_step2").click(function () {
     yandexPaymentFrameSrc = yandexPaymentFrameSrc.replaceBetween(startIndex, endindex, rub);
 
     //replace label value
-    if (accountId) {
+    if (accountIds) {
+        if (accountIds.substr(accountIds.length - 1) == ',') {
+            accountIds = accountIds.substr(0, accountIds.length - 1);
+        }
         startIndex = yandexPaymentFrameSrc.indexOf("label=");
         startIndex = startIndex + "label=".length;
         endindex = yandexPaymentFrameSrc.length;
-        yandexPaymentFrameSrc = yandexPaymentFrameSrc.replaceBetween(startIndex, endindex, accountId);
+        yandexPaymentFrameSrc = yandexPaymentFrameSrc.replaceBetween(startIndex, endindex, accountIds);
     } else {
         alert("Пожалуйста вернитесь к шагу 1 и проверте ваши данные");
         $("#yandexPaymentFrame").attr("src", "");
@@ -84,7 +105,7 @@ function getServicesPayAmount() {
         payAmont++;
     }
     var subscriptionMonths = $("#subscriptionFor").val();
-    payAmont = payAmont * subscriptionMonths;
+    payAmont = payAmont * subscriptionMonths * correctAccounts;
     return payAmont;
 }
 

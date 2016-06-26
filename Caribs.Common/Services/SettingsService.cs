@@ -54,5 +54,41 @@ namespace Caribs.Common.Services
                 return ConfigurationManager.AppSettings["CaribsSecretYandexKey"];
             }
         }
+
+        public static string TurboSmsDbHost
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["TurboSmsDbHost"];
+            }
+        }
+        public static string TurboSmsDbName
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["TurboSmsDbName"];
+            }
+        }
+        public static string TurboSmsDbUserName
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["TurboSmsDbUserName"];
+            }
+        }
+        public static string TurboSmsDbUserPassword
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["TurboSmsDbUserPassword"];
+            }
+        }
+        public static string NotificationEmails
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["NotificationEmails"];
+            }
+        }
     }
 }

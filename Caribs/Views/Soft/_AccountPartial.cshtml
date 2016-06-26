@@ -1,0 +1,24 @@
+﻿@model int
+<div class="accBlockWrapper">
+    <a href="#" class="close-classic" onclick="$(this).parent().remove();">X</a>
+    <div style="text-align: left;">
+        <span class="accblockTitle">Аккаунт №@Model</span>
+    </div>
+    <div class="accBlock">
+        <input type="text" id="login_@Model" placeholder="Caribbeanbridge Login" />
+        <input type="password" id="password_@Model" placeholder="Caribbeanbridge Password" />
+    </div>
+</div>
+@{
+    var next = Model + 1;
+}
+<div style="text-align: left;">
+    @Ajax.ActionLink(
+            "*У меня еще есть аккаунт",
+    "RegistrationAccount",
+    new { number = next },
+    new AjaxOptions { UpdateTargetId = "accounts", InsertionMode = InsertionMode.InsertAfter },
+                new { onclick = "$(this).hide();$(this).parent().prev().find('.close-classic').hide();", @class = "moreAcc" }
+    )
+</div>
+

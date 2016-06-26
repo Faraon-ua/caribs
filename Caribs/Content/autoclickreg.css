@@ -37,6 +37,51 @@ input#pay {
     width: 100%;
 }
 
+.accBlockWrapper {
+    position: relative;
+}
+.close-classic {
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    right: 5px;
+    text-decoration: none;
+    top: -7px;
+    border-color: rgb(9, 35, 78);
+    background: rgb(9, 35, 78);
+    border-radius: 50%;
+    line-height: 25px;
+	width: 25px;
+	height: 25px; 
+}
+
+.accBlock {
+    padding-left: 5px;
+    border-left: 4px solid rgb(9, 35, 78);
+    margin-bottom: 5px;
+}
+
+.accBlock-success {
+    padding-left: 5px;
+    border-left: 4px solid #27AE60;
+    margin-bottom: 5px;
+}
+
+.accBlock-fail {
+    padding-left: 5px;
+    border-left: 4px solid red;
+    margin-bottom: 5px;
+}
+
+.accblockTitle {
+    color: #27AE60;
+}
+
+.moreAcc {
+    color: rgb(9, 35, 78);
+    font-size: 15px;
+}
+
 tr.spaceUnder > td {
     padding-bottom: 1em;
 }

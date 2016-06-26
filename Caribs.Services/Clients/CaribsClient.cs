@@ -165,10 +165,28 @@ namespace Caribs.Services.Clients
                         await db.SaveChangesAsync();
                     }
 
+                    var trs = newAwards.Select(entry => entry.ParentNode.ParentNode);
                     var resultHtml =
-                        string.Concat(
-                            newAwards.Select(entry => entry.ParentNode.ParentNode).Select(entry => entry.OuterHtml));
-                    EmailHelper.Instance.SendNewAwards(resultHtml, account.Email, account.Login);
+                        string.Concat(trs.Select(entry => entry.OuterHtml));
+                    var advertisingTrs = trs.Where(entry => entry.SelectSingleNode("./td[6]")
+                        .InnerText.Contains(SettingsService.CaribsTransactionAdvertisingBonusText));
+                    var dateValues = advertisingTrs.Select(tr => tr.SelectSingleNode("./td[last()]/span").InnerText).ToList();
+                    var tdValues =
+                        advertisingTrs.Select(
+                            tr => string.Join("|", tr.SelectNodes("./td").Skip(3).Take(2).Select(entry => entry.InnerText))).ToList();
+                    for (int i = 0; i < advertisingTrs.Count(); i++)
+                    {
+                        tdValues[i] += "|" + dateValues[i];
+                    }
+                    var smsJoinedStr = string.Join(";", tdValues);
+                    if (!string.IsNullOrEmpty(account.Email))
+                    {
+                        EmailHelper.Instance.SendNewAwards(resultHtml, account.Email, account.Login);
+                    }
+                    if (!string.IsNullOrEmpty(account.Phone))
+                    {
+                        SmsService.Instance.SendSms(account.Phone, smsJoinedStr);
+                    }
                 }
             }
         }

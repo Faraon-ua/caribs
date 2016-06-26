@@ -7,7 +7,7 @@ namespace Caribs.Domain.Models
 {
     public enum MlmAccountType
     {
-        CaribbeanBridge
+        CaribbeanBridge = 0
     }
     public class MlmAccount
     {
